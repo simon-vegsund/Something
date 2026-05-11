@@ -42,6 +42,7 @@
 		"vitest": "^4.0.15"
 	},
 	"dependencies": {
+		"@neondatabase/serverless": "^1.1.0",
 		"postgres": "^3.4.7"
 	}
 }
