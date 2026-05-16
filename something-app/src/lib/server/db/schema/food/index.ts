@@ -1,12 +1,9 @@
 import { pgTable, uuid, text, numeric, integer, index } from 'drizzle-orm/pg-core';
-import { sql } from 'drizzle-orm';
 
 export const food = pgTable(
 	'food',
 	{
-		id: uuid('id')
-			.default(sql`uuid_generate_v7()`)
-			.primaryKey(),
+		id: uuid('id').defaultRandom().primaryKey(),
 		name: text('name').notNull(),
 		carbs: numeric('carbs', { precision: 6, scale: 2 }),
 		protein: numeric('protein', { precision: 6, scale: 2 }),

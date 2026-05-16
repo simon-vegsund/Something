@@ -1,13 +1,10 @@
 import { pgTable, date, uuid, varchar, numeric, timestamp, index } from 'drizzle-orm/pg-core';
-import { sql } from 'drizzle-orm';
 import { heightUnitEnum } from '../enums';
 
 export const user = pgTable(
 	'user',
 	{
-		id: uuid('id')
-			.default(sql`uuid_generate_v7()`)
-			.primaryKey(),
+		id: uuid('id').defaultRandom().primaryKey(),
 		first_name: varchar({ length: 256 }),
 		last_name: varchar({ length: 256 }),
 		date_of_birth: date('date_of_birth', { mode: 'date' }),

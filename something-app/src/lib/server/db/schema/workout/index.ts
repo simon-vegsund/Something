@@ -1,14 +1,11 @@
 import { pgTable, uuid, varchar, integer, timestamp, index } from 'drizzle-orm/pg-core';
-import { sql } from 'drizzle-orm';
 import { dayEnum, categoryEnum, cardioEnum } from '../enums';
 import { user } from '../user';
 
 export const workout = pgTable(
 	'workout',
 	{
-		id: uuid('id')
-			.default(sql`uuid_generate_v7()`)
-			.primaryKey(),
+		id: uuid('id').defaultRandom().primaryKey(),
 		user_id: uuid('user_id')
 			.notNull()
 			.references(() => user.id, { onDelete: 'cascade' }),

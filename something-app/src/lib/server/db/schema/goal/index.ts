@@ -1,14 +1,11 @@
 import { pgTable, uuid, text, numeric, timestamp, index } from 'drizzle-orm/pg-core';
-import { sql } from 'drizzle-orm';
 import { goalEnum } from '../enums';
 import { user } from '../user';
 
 export const goal = pgTable(
 	'goal',
 	{
-		id: uuid('id')
-			.default(sql`uuid_generate_v7()`)
-			.primaryKey(),
+		id: uuid('id').defaultRandom().primaryKey(),
 		user_id: uuid('user_id')
 			.notNull()
 			.references(() => user.id, { onDelete: 'cascade' }),
