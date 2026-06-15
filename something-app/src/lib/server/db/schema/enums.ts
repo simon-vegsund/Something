@@ -11,24 +11,6 @@ export const dayEnum = pgEnum('day', [
 	'Biceps'
 ]);
 
-export const categoryEnum = pgEnum('workout_category', [
-	'Strength',
-	'Cardio',
-	'Flexibility',
-	'Other'
-]);
-
-export const cardioEnum = pgEnum('cardio_type', [
-	'Walking',
-	'Running',
-	'Cycling',
-	'Elliptical',
-	'Swimming',
-	'Interval',
-	'HIIT',
-	'Other'
-]);
-
 export const mealEnum = pgEnum('meal_type', [
 	'Breakfast',
 	'Lunch',
