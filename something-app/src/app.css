@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+:root {
+
+
+    /* === FONT SIZES === */
+    --font-size: 1rem;
+    --font-size-small: 0.875rem;
+    --font-size-large: 1.25rem;
+
+
+    /* === SIZE VARIABLES === */
+    --space: 0.25rem; /* 4px */
+    --space-1: var(--space);
+    --space-2: calc(var(--space) * 2); /* .5rem = 8px */
+    --space-3: calc(var(--space) * 3); /* .75rem = 12px */
+    --space-4: calc(var(--space) * 4); /* 1rem = 16px */
+    --space-5: calc(var(--space) * 5); /* 1.25rem = 20px */
+    --space-6: calc(var(--space) * 6); /* 1.5rem = 24px */
+    --space-7: calc(var(--space) * 7); /* 1.75rem = 28px */
+    --space-8: calc(var(--space) * 8); /* 2rem = 32px */
+    --space-xxl: 3rem; /* 48px */
+    --space-3xl: 4rem; /* 64px */
+    --space-4xl: 6rem; /* 96px */
+
+
+    /* === BORDER RADIUS === */
+    --radius-xs: 2px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-xxl: 24px;
+    --radius-pill: 9999px;
+    --radius-circle: 50%;
+
+
+    /* === LINE HEIGHT === */
+    --line-height-larger: 1.6;
+    --line-height-small: 1.05;
+
+    /* === LETTER SPACING === */
+    --letter-spacing-eyebrow: 0.15em;
+
+
+    --color-white: var(--color-text);
+    --color-black: var(--color-bg);
+
+
+}
